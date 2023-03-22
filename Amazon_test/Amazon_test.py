@@ -1,6 +1,7 @@
 import time
 from faker import Faker
 import unittest
+from selenium.common.exceptions import WebDriverException as WDE
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
@@ -12,6 +13,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import amazon_help as HP
+import AllureReports
 
 fake = Faker()
 
@@ -28,7 +30,8 @@ class ChromeSearch(unittest.TestCase):
         time.sleep(3)
         wait = WebDriverWait(driver, 3)
         HP.check_API_code(driver)
-        HP.assert_title(driver, "Amazon.com. Spend less. Smile more.")
+        HP.check_url(driver, "https://www.amazon.com/")
+        #HP.assert_title(driver, "Amazon.com. Spend less. Smile more.")
 
         HP.df(By.XPATH, "//span[@class='nav-line-2 '][contains(.,'Account & Lists')]").click()
         HP.assert_title(driver, "Amazon Sign-In")
@@ -37,7 +40,7 @@ class ChromeSearch(unittest.TestCase):
         HP.df(By.XPATH, "//input[@type='text'][contains(@id,'name')]").send.keys(fake.name())
         HP.df(By.XPATH, "//input[@type='email'][contains(@id,'email')]").send_keys(fake.email())
         HP.df(By.XPATH, "//input[@id='continue']")
-        #password and confirm
+        # password and confirm
         fakePassword = fake.password()
         HP.df(By.XPATH, "//input[contains(@placeholder,'At least 6 characters')]").send_keys(fakePassword)
         HP.df(By.XPATH, "//input[@type='password'][contains(@id,'check')]").send_keys(fakePassword)
@@ -190,3 +193,8 @@ class FirefoxSearch(unittest.TestCase):
 
     def tearDown(self):
         self.driver.quit()
+
+
+if __name__ == "__main__":
+    unittest.main(AllureReports)
+

@@ -1,3 +1,5 @@
+import random
+import time
 from telnetlib import EC
 import requests
 from selenium.webdriver.common.by import By
@@ -28,5 +30,20 @@ def assert_title(driver, title):
     if not title in driver.title:
         raise Exception(f"Page {title} has wrong Title!")
 
+        # random delay function:
 
 
+def delay():
+    time.sleep(random.randint(1, 5))
+    delay()
+
+    # Check "Account registration" page URL
+
+
+def check_current_url(driver, current_url):
+    acct_expected_url = current_url
+    acct_actual_url = driver.current_url
+    if acct_expected_url == acct_actual_url:
+        print('"Account registration" page URL is correct:', driver.current_url)
+    else:
+        print('"Account registration" page URL is wrong:', driver.current_url)
