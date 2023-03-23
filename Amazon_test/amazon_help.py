@@ -12,10 +12,10 @@ main_url = "https://www.amazon.com/"
 from selenium.webdriver.support import expected_conditions as EC
 
 
-def check_API_code(driver):
-    code = requests.get(main_url).status_code
+def check_API_code(driver, url):
+    code = requests.get(url).status_code
     if code == 200:
-        print("Url has ", requests.get(main_url).status_code, " as status Code")
+        print("Url has ", requests.get(url).status_code, " as status Code")
     else:
         print("API response code is not 200")
 
