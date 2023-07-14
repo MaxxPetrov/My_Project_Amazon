@@ -49,10 +49,21 @@ def fill_fields():
         zipcode: fake.postcode()
     }
 
+    print("FIELD DATA =", fields_data)
+    print(type(fields_data))
+    iter =0
     for xpath, data in fields_data.items():
+        iter +=1
+        print(iter)
+        print(xpath, data)
+        print(type(xpath), type(data))
         drv.find_element("xpath", xpath).send_keys(data)
         sleep(1)
 
+    for key in fields_data.keys():
+        print(key)
+
+    exit()
 
 def fill_date():
     date_ = fake.date_between_dates(datetime.now() + timedelta(1), datetime.now() + timedelta(100))
@@ -138,7 +149,7 @@ def main():
 
 
 if __name__ == "__main__":
-    for n in range(100):
+    for n in range(1):
         print("Test :", n)
         drv = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
         drv.maximize_window()

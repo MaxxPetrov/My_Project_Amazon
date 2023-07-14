@@ -6,8 +6,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.core import driver
 
-df = driver.find_element
-
 main_url = "https://www.amazon.com/"
 from selenium.webdriver.support import expected_conditions as EC
 
