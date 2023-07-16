@@ -28,7 +28,7 @@ email = "//input[@type='email']"
 DOB = "//div[contains(@data-role,'expander')]"
 phone = "//input[@type='text'][contains(.,'Format 3 3 4')]"
 mother_first = "(//input[contains(@data-role,'i123-input')])[12]"
-mother_lat = "(//input[contains(@data-role,'i123-input')])[13]"
+c = "(//input[contains(@data-role,'i123-input')])[13]"
 father_first = "(//input[contains(@data-role,'i123-input')])[14]"
 father_last = "(//input[contains(@data-role,'i123-input')])[15]"
 any_text1 = "//textarea[@id='textarea-00000018']"
@@ -37,6 +37,33 @@ apply_btn = "//span[contains(text(),'APPLY')]"
 
 
 def fill_fields():
+    inputs = drv.find_elements("tag name", "input")
+    print(len(inputs), inputs)
+
+    fields_data = {
+        0: fake.first_name(),
+        1: fake.last_name(),
+        2: fake.email(),
+        4: randint(1000000000, 9999999999),
+        5: fake.street_address(),
+        6: fake.building_number(),
+        7: fake.city(),
+        8: fake.state(),
+        9: fake.postcode(),
+        10: fake.first_name(),
+    }
+    index = 0
+    for elem in inputs:
+        elem.clear()
+        print(index)
+        elem.send_keys(fields_data[index])
+        print(elem)
+        index += 1
+        sleep(5)
+
+    sleep(10)
+    return ()
+
     fields_data = {
         f_name: fake.first_name(),
         l_name: fake.last_name(),
@@ -46,17 +73,34 @@ def fill_fields():
         street_address2: fake.building_number(),
         city: fake.city(),
         region: fake.state(),
-        zipcode: fake.postcode()
+        zipcode: fake.postcode(),
+        mother_first: fake.first_name(),
+
     }
 
     for xpath, data in fields_data.items():
         drv.find_element("xpath", xpath).send_keys(data)
+        drv.find_element()
         sleep(1)
 
     for key in fields_data.keys():
         print(key)
 
+def calculate(x, y):
+    print("Solution:")
+    #201 code line
+    print(x+y)
 
-    exit()
+drv = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+drv.maximize_window()
+drv.get(Url)
+fill_fields()
+
+
+calculate(234, 23432)
+sleep(20)
+# any code
+calculate(23, 3423)
+exit()
 
 
