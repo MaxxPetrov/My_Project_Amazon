@@ -113,7 +113,8 @@ def fill_check():
 def fill_drop():
     select = Select(
         drv.find_element("xpath", dropdown))
-    select.select_by_index(randint(0, 2))
+    select.select_by_index(randint(0, 4))
+    select.select_by_value("Miss")
 
 
 def main():

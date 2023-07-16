@@ -1,2 +1,65 @@
 1689209846733	geckodriver	INFO	Listening on 127.0.0.1:6326
 1689209849728	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "6327" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\max89\\AppData\\Local\\Temp\\rust_mozprofileVdqE8U"
+1689533064980	geckodriver	INFO	Listening on 127.0.0.1:8896
+1689533068019	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "8897" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\max89\\AppData\\Local\\Temp\\rust_mozprofilenoxWGm"
+1689533514752	geckodriver	INFO	Listening on 127.0.0.1:9999
+1689536115006	geckodriver	INFO	Listening on 127.0.0.1:14202
+1689536118037	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "14203" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\max89\\AppData\\Local\\Temp\\rust_mozprofilemINMHa"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1689536118526	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1689536118581	Marionette	INFO	Listening on port 14215
+WebDriver BiDi listening on ws://127.0.0.1:14203
+Read port: 14215
+1689536118741	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:14203/devtools/browser/026c730c-cd62-4fcf-a0f5-db39b8fbd443
+[Parent 14632, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:793
+1689536134688	Marionette	INFO	Stopped listening on port 14215
+Dynamically enable window occlusion 1
+1689536138360	geckodriver	INFO	Listening on 127.0.0.1:14276
+1689536141404	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "14277" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\max89\\AppData\\Local\\Temp\\rust_mozprofilersFfis"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1689536141625	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1689536141677	Marionette	INFO	Listening on port 14286
+WebDriver BiDi listening on ws://127.0.0.1:14277
+Read port: 14286
+1689536141819	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:14277/devtools/browser/8e3570e8-2eb0-4077-a3be-b38b720cbda8
+JavaScript error: https://images-na.ssl-images-amazon.com/images/G/01/csminstrumentation/rd-script-6d68177fa6061598e9509dc4b5bdd08d.js, line 1: TypeError: a.ue.log is not a function
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.amazon.com."
+JavaScript warning: https://www.amazon.com/ line 2048 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/, line 2088: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0 line 902 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.amazon.com."
+JavaScript warning: https://www.amazon.com/ap/register?showRememberMe=true&openid.pape.max_auth_age=0&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=usflex&mobileBrowserWeblabTreatment=C&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3Fref_%3Dnav_ya_signin&prevRID=X5JKP9Y85MCT6EVKP4EX&openid.assoc_handle=usflex&openid.mode=checkid_setup&desktopBrowserWeblabTreatment=C&prepopulatedLoginId=&failedSignInCount=0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0 line 2729 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.amazon.com."
+1689536153005	Marionette	INFO	Stopped listening on port 14286
+Dynamically enable window occlusion 1
+1689536205764	geckodriver	INFO	Listening on 127.0.0.1:14426
+1689536208792	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "14427" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\max89\\AppData\\Local\\Temp\\rust_mozprofilePob7aK"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1689536209039	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1689536209088	Marionette	INFO	Listening on port 14438
+WebDriver BiDi listening on ws://127.0.0.1:14427
+Read port: 14438
+1689536209227	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:14427/devtools/browser/1d08bfdb-14ea-44c7-b368-84d0931c06fa
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.amazon.com."
+JavaScript warning: https://www.amazon.com/ line 2048 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/, line 2088: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0 line 902 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.amazon.com."
+JavaScript warning: https://www.amazon.com/ap/register?showRememberMe=true&openid.pape.max_auth_age=0&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=usflex&mobileBrowserWeblabTreatment=C&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3Fref_%3Dnav_ya_signin&prevRID=W1VQJH738FRJQS2ECT5V&openid.assoc_handle=usflex&openid.mode=checkid_setup&desktopBrowserWeblabTreatment=C&prepopulatedLoginId=&failedSignInCount=0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0 line 2729 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.amazon.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.amazon.com."
+JavaScript warning: https://www.amazon.com/ line 2048 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/, line 2088: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1689536226181	Marionette	INFO	Stopped listening on port 14438
+Dynamically enable window occlusion 1
+1689536250301	geckodriver	INFO	Listening on 127.0.0.1:14613
+1689540047508	geckodriver	INFO	Listening on 127.0.0.1:13148
