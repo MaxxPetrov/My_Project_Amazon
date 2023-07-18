@@ -29,6 +29,7 @@ class ChromeSearch(unittest.TestCase):
         driver = self.driver
         driver.get(HP.main_url)
         time.sleep(3)
+        HP.check_API_code()
         wait = WebDriverWait(driver, 3)
         HP.assert_title(driver, "Amazon.com. Spend less. Smile more.")
 
@@ -66,13 +67,18 @@ class ChromeSearch(unittest.TestCase):
         HP.assert_title(driver, "Amazon.com. Spend less. Smile more.")
 
         # verifying if user can create account without paswords
-        driver.find_element(By.ID, "nav-link-accountList-nav-line-1").click()
+        driver.find_element(By.ID, "nav-link-accountList").click()
         driver.find_element(By.ID, "createAccountSubmit").click()
         driver.find_element(By.ID, "ap_customer_name").send_keys(fake.name())
         driver.find_element(By.ID, "ap_email").send_keys(fake.email())
+        fakepassword = fake.password()
+        driver.find_element(By.ID, "ap_password").send_keys(fakepassword)
         driver.find_element(By.ID, 'continue').click()
-        n = driver.find_element(By.XPATH, "//div[@class='a-alert-content'][contains(.,'Minimum 6 characters')]")
-        if n == driver.find_element(By.XPATH, "//div[@class='a-alert-content'][contains(.,'Minimum 6 characters')]"):
+        time.sleep(5)
+        n = driver.find_element(By.ID, "auth-password-missing-alert")
+        print(n, n.text)
+
+        if n.text == "Minimum 6 characters required":
             print("Error message 'Minimum 6 characters required' present")
         else:
             print("Failed:No Minimum 6 characters required present")

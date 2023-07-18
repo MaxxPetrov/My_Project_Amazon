@@ -6,16 +6,17 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.core import driver
 
-main_url = "https://www.amazon.com/"
+main_url = "https://www.amazon.com"
 from selenium.webdriver.support import expected_conditions as EC
 
 
-def check_API_code(driver, url):
-    code = requests.get(url).status_code
+def check_API_code():
+    code = requests.get(main_url).status_code
+    print(code)
     if code == 200:
-        print("Url has ", requests.get(url).status_code, " as status Code")
+        print("Url has ", code, " as status Code")
     else:
-        print("API response code is not 200")
+        print("API response code is not 200" , code )
 
 
 def assert_title(driver, title):
